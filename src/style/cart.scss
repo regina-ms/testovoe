@@ -1,0 +1,146 @@
+.cart-page {
+    margin-top: 20px;
+    padding: 5vw;
+}
+
+.cart-page-content {
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+    justify-content: center;
+    gap: 35px;
+}
+
+.cart-header {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.products-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+.product {
+    margin-bottom: 16px;
+}
+
+.product-description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+}
+
+.product-img{
+    width: 30%;
+}
+
+.product-info, .product-counter{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.delete-product{
+    background-color: rgb(229, 132,252);
+    border: none;
+    border-radius: 20px;
+    padding: 4px 12px;
+    margin-top: 16px;
+    font-family: "pobeda";
+    font-size: 20px;
+    font-weight: bold;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.product-counter {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.plus, .minus {
+    background-color: rgb(229, 132,252);
+    border: none;
+    border-radius: 10px;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+
+.plus {
+    background-image: url('./images/icons8-plus-50.png');
+}
+
+.minus {
+    background-image: url('./images/icons8-minus-50.png');
+}
+
+.order-info {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.total-cost {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#customer-data {
+    border:3px solid rgb(229, 132,252);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+input {
+    border: 2px solid rgb(229, 132,252);
+    border-radius: 20px;
+    padding: 16px;
+    outline: none;
+}
+
+#customer-name {
+    margin-bottom: 10px;
+}
+
+.checkout {
+    margin-top: 10px;
+    border: none;
+    background-color: rgb(229, 132,252);
+    border-radius: 20px;
+    padding: 16px 0;
+    font-weight: bold;
+}
+
+.empty-cart {
+    text-align: center;
+}
+
+.return-to-main {
+    margin-top: 10px;
+    border: none;
+    background-color: rgb(229, 132,252);
+    border-radius: 20px;
+    padding: 16px 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media(max-width: 767px) {
+    .cart-page-content {
+        flex-direction: column;
+    }
+}
+
+
+

@@ -1,0 +1,256 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "pobeda";
+}
+
+.main-page {
+    display: flex;
+    margin: auto;
+    padding: 5vw;
+    max-width: 1200px;
+}
+
+.control {
+    margin-right: 50px;
+    min-width: 140px;
+}
+
+.control-header {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.open-brands{
+    display: none;
+}
+
+.brands-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.brands-list li {
+    font-size: 30px;
+}
+
+.custom-checkbox {
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-checkbox+label {
+    position: relative;
+}
+
+.custom-checkbox:not(:checked)+label::before {
+    content: "";
+    display: inline-flex;
+    position: absolute;
+    background-image: url("./images/free-icon-square-7554093.png");
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    top: 4px;
+    left: -25px;
+}
+
+.custom-checkbox:checked+label::before {
+    content: "";
+    display: inline-flex;
+    position: absolute;
+    background-image: url("./images/free-icon-check-545749.png");
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    top: 4px;
+    left: -30px;
+}
+
+.control-buttons {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.apply-filter {
+    padding: 12px;
+    background-color: rgb(229, 132, 252);
+    font-family: "pobeda";
+    font-size: 25px;
+    font-weight: bold;
+    color: aliceblue;
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.reset-filter {
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+}
+
+.reset-filter::before {
+    content: "";
+    background-image: url("./images/free-icon-cross-mark-7782775.png");
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 10px;
+    top: 7px;
+}
+
+.cart {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.to-cart-page {
+    background-image: url("./images/free-icon-shopping-cart-6645108.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.item-counter {
+    font-size: 50px;
+}
+
+.items-container {
+    width: 1200px;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 15px;
+}
+
+.item {
+    max-width: 30%;
+    border: 3px solid rgb(229, 132, 252);
+    border-radius: 25px;
+    font-size: 25px;
+    font-weight: bold;
+    display: none;
+}
+
+.item-img {
+    width: 100%;
+}
+
+.item-description {
+    text-align: center;
+}
+
+.to-cart {
+    background-color: rgb(229, 132, 252);
+    border: none;
+    border-radius: 20px;
+    padding: 4px 12px;
+    margin: 4px 0;
+    font-family: "pobeda";
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.pagination-buttons {
+    margin-top: 25px;
+    display: flex;
+    list-style: none;
+    gap: 5px;
+    justify-content: center;
+}
+
+.pagination-button {
+    background-color: transparent;
+    border: 2px solid rgb(229, 132, 252);
+    padding: 10px;
+    border-radius: 15px;
+    font-family: "pobeda";
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.empty-brand-message {
+    text-align: center;
+}
+
+.empty-brand-message span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+@media(max-width: 801px) {
+    .main-page {
+        flex-direction: column;
+    }
+
+    .control {
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    .brands-button {
+        display: block;
+        background-image: url("./images/icons8-triangle-25.png");
+        background-size: cover;
+        width: 25px;
+        height: 25px;
+        background-color: transparent;
+        border: none;
+        transform: rotate(0);
+    }
+
+    .reset-filter::before {
+        left: -4px;
+    }
+
+    .items-container {
+        margin-top: 24px;
+        width: auto;
+    }
+
+    .items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        max-width: 50%;
+    }
+
+}
