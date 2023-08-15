@@ -22,9 +22,7 @@ export default function createMainPage() {
             </div>
         </div>
         <div class="items-container">
-            <ul class="items">
             ${createProducts(products)}
-            </ul>
             <div class="pagination">
                 <ul class="pagination-buttons">
                 </ul>
