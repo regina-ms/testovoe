@@ -1,8 +1,9 @@
+import appConstants from '../common/constants';
 import brands from '../brands.json';
 import products from '../products.json';
 import createBrands from "../components/brandList.js";
 import createProducts from '../components/productsList.js';
-
+import resetButton from '../components/resetButton';
 
 export default function createMainPage() {
     return `<main class="main-page">
@@ -11,22 +12,19 @@ export default function createMainPage() {
             <h2 class="control-header">Бренды</h2>
             <button type="button" class="brands-button"></button>
             </div>
-            <ul class="brands-list">
-                ${createBrands(brands)}
-            </ul>
+            ${createBrands(brands)}
             <div class="control-buttons">
                 <button type="button" class="apply-filter">Применить</button>
-                <a class="reset-filter" href="#">Сбросить</a>
+                ${resetButton()}
             </div>
             <div class="cart">
-                <a class="to-cart-page" href="/cart"></a>
+                <!-- Раз есть константы путей, то это их идеальное применение -->
+                <a class="to-cart-page" href="${appConstants.pathnames.cartPage}"></a>
                 <div class="item-counter total-amount"></div>
             </div>
         </div>
         <div class="items-container">
-            <ul class="items">
             ${createProducts(products)}
-            </ul>
             <div class="pagination">
                 <ul class="pagination-buttons">
                 </ul>

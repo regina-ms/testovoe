@@ -21,7 +21,7 @@ export default function filterItems() {
         const brands = getArrayOfItems('custom-checkbox');
         const checkedBrands = brands.filter(item => item.checked);
         if (checkedBrands.length === 0) {
-            showItems(products, appConstants.itemsPerPage, appConstants.currentPageDefault);
+            showItems(products);
             return;
         }
         document.querySelector('.pagination-buttons').innerHTML = "";
@@ -31,7 +31,7 @@ export default function filterItems() {
         appendPagNumbBtn(res);
         res.forEach((el) => el.classList.add('filtered'));
         if (res.length !== 0) {
-            showItems(res, appConstants.itemsPerPage, appConstants.currentPageDefault);
+            showItems(res);
             return;
         }
         products.forEach((el) => {

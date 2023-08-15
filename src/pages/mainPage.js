@@ -5,11 +5,11 @@ import getArrayOfItems from "../api/getArrayOfItems.js";
 import appendPagNumbBtn from "../components/renderPaginationBtns.js";
 import pagination from "../api/pagination.js";
 import filterItems from "../api/brandFilter.js";
-import resetFilter from "../api/reset.js";
 import cartCounter from "../api/cartCount.js";
 import goToCart from "../api/goToCart.js";
 import { renderCartCounterOnMainPage } from "../api/renderCartCounter.js";
 import openBrands from "../api/openBrands.js";
+import { createResetFilterHandler } from '../components/resetButton'
 
 const mainPage = () => {
     app.innerHTML = createMainPage();
@@ -23,10 +23,10 @@ const mainPage = () => {
     }
     const products = getArrayOfItems("item");
     appendPagNumbBtn(products);
-    showItems(products, appConstants.itemsPerPage, appConstants.currentPageDefault);
+    showItems(products);
     pagination();
     filterItems();
-    resetFilter();
+    createResetFilterHandler()
     cartCounter();
     goToCart();
     renderCartCounterOnMainPage();
