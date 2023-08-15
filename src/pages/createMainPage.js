@@ -11,9 +11,7 @@ export default function createMainPage() {
             <h2 class="control-header">Бренды</h2>
             <button type="button" class="brands-button"></button>
             </div>
-            <ul class="brands-list">
-                ${createBrands(brands)}
-            </ul>
+            ${createBrands(brands)}
             <div class="control-buttons">
                 <button type="button" class="apply-filter">Применить</button>
                 ${resetButton()}
