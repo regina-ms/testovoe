@@ -16,7 +16,7 @@ export default function createMainPage() {
             </ul>
             <div class="control-buttons">
                 <button type="button" class="apply-filter">Применить</button>
-                <a class="reset-filter" href="#">Сбросить</a>
+                ${resetButton()}
             </div>
             <div class="cart">
                 <a class="to-cart-page" href="/cart"></a>
