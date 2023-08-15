@@ -23,7 +23,7 @@ const mainPage = () => {
     }
     const products = getArrayOfItems("item");
     appendPagNumbBtn(products);
-    showItems(products, appConstants.itemsPerPage, appConstants.currentPageDefault);
+    showItems(products);
     pagination();
     filterItems();
     resetFilter();

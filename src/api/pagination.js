@@ -16,9 +16,9 @@ export default function pagination() {
         const items = getArrayOfItems('item');
         const filteredItems = getArrayOfItems('filtered');
         if (filteredItems.length !== 0) {
-            showItems(filteredItems, appConstants.itemsPerPage, pageNumber);
+            showItems(filteredItems, pageNumber);
         } else {
-            showItems(items, appConstants.itemsPerPage, pageNumber);
+            showItems(items, pageNumber);
         }
     })
 }
